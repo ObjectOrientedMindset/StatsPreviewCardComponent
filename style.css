@@ -1,27 +1,30 @@
 body{
  background-color: hsl(233, 47%, 7%);
- 
 
  font-family: 'Inter', sans-serif;
  font-size: 15px;
  font-weight: normal;
  line-height:normal;
+ margin:0;
 }
 
 .container-1{
  display:flex;
  justify-content: center;
+ margin:15rem;
 }
 .box-1{
  flex-basis: 500px;
+ flex-grow: 0;
+ flex-shrink: 0;
  background-color: hsl(244, 38%, 16%);
- height: 414px;
- margin-top: 200px;
  border-radius: 5px 0 0 5px;
+ height: 446px;
 }
 .box-2{
- flex-basis: 500px;
- margin-top: 200px;
+ flex-basis:500px;
+ flex-grow: 0;
+ flex-shrink: 0;
 }
 p{
  color:hsla(0, 0%, 100%, 0.6);
@@ -71,10 +74,24 @@ h6{
  padding-inline-start: 55px;
 }
 img{
- width: 100%;
+ 
  border-radius: 0 5px 5px 0;
  filter:brightness(30%) sepia(50%) saturate(40) hue-rotate(270deg);
 }
-
+@media (max-width:1024px){
+.container-1{
+ flex-direction: column-reverse;
+ justify-content: center;
+ margin:0;
+}
+.box-1{
+ margin:0;
+ width: 540px;
+}
+.box-2{
+ margin:0;
+ flex-basis:0;
+}
+}
 
 
